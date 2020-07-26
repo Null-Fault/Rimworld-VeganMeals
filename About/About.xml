@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Beyond Impossible Meals</name>
+    <author>elkyelky</author>
+    <packageId>elkyelky.beyondimpossiblemeals</packageId>
+    <supportedVersions>
+      <li>1.1</li>
+    </supportedVersions>
+    <description>For when even vegetarian meals are not ethical enough for your chosen conduct.
+
+This mod is for people who wish to make their lives beyond impossible by striving to avoid eating any animal products in their war crimes simulator. It adds strict vegan recipes for all plated meals to the campfire and stoves where appropriate.
+
+Since plant based foods are less calorie dense than animal products, the nutritional value of the meals are is slightly lower and the work needed is slightly higher. They also cost less.
+
+Unlike the meals made with ConZ's mod, these are actually vegan and do not stack on top of vanilla meals. Also, unlike Chicken Plucker's Vegan Survival Meals, eating them does not give any extra moodlets.
+
+Beyond Impossible Meals is intended as a companion for Muesli, which gives a vegan equivalent to pemmican, if that's something you want as well.
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=2175602170
+
+Should not conflict with other mods, not even Chicken Plucker's Vegan Survival Meals.
+
+github: https://github.com/meldra/rimworldmod-beyondimpossiblemeals
+
+If you want to thank me with more than just words, hit up my ko-fi: https://ko-fi.com/elkyelky
+    </description>
+</ModMetaData>

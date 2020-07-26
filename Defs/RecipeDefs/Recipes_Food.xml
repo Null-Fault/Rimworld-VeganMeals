@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef Name="MakeVegan" Abstract="True">
+    <fixedIngredientFilter>
+	  <categories>
+		<li>PlantFoodRaw</li>
+	  </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+	   <categories>
+		<li>PlantFoodRaw</li>
+	   </categories>
+	   <disallowedCategories>
+        <li>MeatRaw</li>
+        <li>AnimalProductRaw</li>
+       </disallowedCategories>
+       <disallowedThingDefs>
+         <li>InsectJelly</li>
+         <li>Milk</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+      <workSkill>Cooking</workSkill>
+    </RecipeDef>
+	
+	<!-- Simple vegan meals -->
+
+    <RecipeDef ParentName="MakeVegan">
+    <defName>Make_Vegan_Simple</defName>
+    <label>make simple vegan meal</label>
+    <description>Make a simple vegan meal from plant based foods</description>
+    <jobString>Making simple vegan meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <VeganSimpleMeal>1</VeganSimpleMeal>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>Campfire</li>
+        </recipeUsers>
+  </RecipeDef>
+  
+  <!-- bulk simple (x4) -->
+  
+    <RecipeDef ParentName="MakeVegan">
+    <defName>Make_Vegan_Simple_Bulk</defName>
+    <label>make simple vegan meals (x4)</label>
+    <description>Make 4 simple vegan meals from plant based foods</description>
+    <jobString>Making 4 simple vegan meals .</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <VeganSimpleMeal>4</VeganSimpleMeal>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+
+        </recipeUsers>
+  </RecipeDef>
+  
+  
+  	<!-- Fine vegan meals -->
+
+    <RecipeDef ParentName="MakeVegan">
+    <defName>Make_Vegan_Fine</defName>
+    <label>make fine vegan meal</label>
+    <description>Make a fine meal crafted from a variety of plant based foods</description>
+    <jobString>Making fine vegan meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+	  <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <products>
+      <VeganFineMeal>1</VeganFineMeal>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+        </skillRequirements>
+  </RecipeDef>
+  
+  <!-- bulk fine (x4) -->
+  
+    <RecipeDef ParentName="MakeVegan">
+    <defName>Make_Vegan_Fine_Bulk</defName>
+    <label>make fine vegan meals (x4)</label>
+    <description>Make 4 fine meals crafted from a variety of plant based foods</description>
+    <jobString>Making 4 fine vegan meals .</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <VeganFineMeal>4</VeganFineMeal>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+        </skillRequirements>
+  </RecipeDef>
+  
+    	<!-- lavish vegan meals -->
+
+    <RecipeDef ParentName="MakeVegan">
+    <defName>Make_Vegan_Lavish</defName>
+    <label>make lavish vegan meal</label>
+    <description>Make a lavish meal from the finest plant based foods. Some ingredients will be wasted.</description>
+    <jobString>Making lavish vegan meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+	  <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <VeganLavishMeal>1</VeganLavishMeal>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+		<skillRequirements>
+			<Cooking>8</Cooking>
+        </skillRequirements>
+  </RecipeDef>
+  
+  <!-- bulk lavish (x4) -->
+  
+    <RecipeDef ParentName="MakeVegan">
+    <defName>Make_Vegan_Lavish_Bulk</defName>
+    <label>make lavish vegan meals (x4)</label>
+    <description>Make 4 lavish meals from the finest plant based foods. Some ingredients will be wasted.</description>
+    <jobString>Making 4 lavish vegan meals .</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>2</count>
+      </li>
+	  <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <VeganLavishMeal>4</VeganLavishMeal>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+		<skillRequirements>
+			<Cooking>8</Cooking>
+        </skillRequirements>
+  </RecipeDef>
+
+
+  <!-- vegan survival meals -->
+
+    <RecipeDef ParentName="MakeVegan">
+    <defName>Make_Vegan_Survival</defName>
+    <label>make vegan survival meal</label>
+    <description>Make meal of plant based foods preserved to prevent spoilage. Perfect travelling rations.</description>
+    <jobString>Making vegan survival meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>0.3</count>
+      </li>
+	  <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>0.3</count>
+      </li>
+    </ingredients>
+    <products>
+      <VeganSurvivalMeal>1</VeganSurvivalMeal>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+		<skillRequirements>
+			<Cooking>8</Cooking>
+        </skillRequirements>
+        <researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+  </RecipeDef>
+  
+  <!-- bulk survival (x4) -->
+  
+    <RecipeDef ParentName="MakeVegan">
+    <defName>Make_Vegan_Survival_Bulk</defName>
+    <label>make vegan survival meals (x4)</label>
+    <description>Make 4 meals of plant based foods preserved to prevent spoilage. Perfect travelling rations.</description>
+    <jobString>Making 4 vegan survival meals .</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>1.2</count>
+      </li>
+	  <li>
+        <filter>
+	      <categories>
+		    <li>PlantFoodRaw</li>
+	      </categories>
+        </filter>
+        <count>1.2</count>
+      </li>
+    </ingredients>
+    <products>
+      <VeganSurvivalMeal>4</VeganSurvivalMeal>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+		<skillRequirements>
+			<Cooking>8</Cooking>
+        </skillRequirements>
+		<researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+  </RecipeDef>
+  
+</Defs>
