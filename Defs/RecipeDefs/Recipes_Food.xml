@@ -83,7 +83,7 @@
         <recipeUsers>
             <li>ElectricStove</li>
             <li>FueledStove</li>
-
+            <li>Campfire</li>
         </recipeUsers>
   </RecipeDef>
   
