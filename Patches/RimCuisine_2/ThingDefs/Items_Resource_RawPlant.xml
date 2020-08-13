@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<!-- If RimCuisine 2 Core is installed, let it do the categories.-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+			<li>[1.0, 1.1] RimCuisine 2 Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+			<!-- fix recipes for RC2 -->
+			    <li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeVegan"]/fixedIngredientFilter/categories</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>
+					</value>
+                </li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeVegan"]/defaultIngredientFilter/categories</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>						
+					</value>
+                </li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeVegan"]/disallowedCategories/categories</xpath>
+					<value>
+						<li>RC2_MeatProcessed</li>
+						<li>RC2_AnimalProductProcessed</li>
+					</value>
+                </li>		
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Vegan_Simple"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>						
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Vegan_Simple_Bulk"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>					
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Vegan_Fine"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>						
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Vegan_Fine_Bulk"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>					
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Vegan_Lavish"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>						
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Vegan_Lavish_Bulk"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>					
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Vegan_Survival"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>						
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Vegan_Survival_Bulk"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_PlantFoodProcessed</li>					
+					</value>
+                </li>
+            </operations>
+        </match>		
+    </Operation> 
+</Patch>
